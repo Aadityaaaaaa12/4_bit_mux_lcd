@@ -55,7 +55,6 @@ module lcd_display (
         lcd_string[14] <= " ";
         lcd_string[15] <= " ";
 
-        // Generate enable pulse every ~10ms
         if (count[19:0] == 20'd0) begin
             LCD_EN <= 1;
             LCD_RW <= 0;     // Always writing
