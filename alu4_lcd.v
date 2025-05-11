@@ -3,7 +3,7 @@ module alu4_lcd(
     input [3:0] sel,
     input [3:0] op1,
     input [3:0] op2,
-    input wire clk, // Add system clock
+    input wire clk, // 50mhz
     output reg [7:0] out,
     output wire [7:0] LCD_DATA,
     output wire LCD_RS,
@@ -37,7 +37,7 @@ module alu4_lcd(
         endcase
     end
 
-    // ✅ LCD display connection
+ 
     lcd_display lcdmod (
         .clk(clk),
         .data_in(out),
