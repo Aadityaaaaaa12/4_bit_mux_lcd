@@ -22,11 +22,11 @@ module divmod(
         end else begin
             rem = op1;
 
-            // Integer part
+          
             result[7:4] = op1 / op2;
             rem = op1 % op2;
 
-            // Fractional part
+          
             for (i = 3; i >= 0; i = i - 1) begin
                 rem = rem << 1;
                 if (rem >= op2) begin
